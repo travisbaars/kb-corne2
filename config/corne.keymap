@@ -12,7 +12,7 @@
         compatible = "zmk,combos";
 
         toggle_utility {
-            bindings = <&mo 4>;
+            bindings = <&mo 0>;
             key-positions = <31 34>;
         };
 
@@ -104,15 +104,6 @@
   &kp F1  &kp F2  &kp F3     &kp F4     &kp F5    &trans  &trans  &trans  &trans  &trans
   &kp N6  &kp N7  &kp N8     &kp N9     &kp N0    &trans  &trans  &trans  &trans  &trans
                   &kp LCTRL  &kp LSHFT  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        utility {
-            bindings = <
-  &none   &trans  &trans  &trans  &trans    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-  &trans  &trans  &trans  &trans  &trans    &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-  &trans  &trans  &trans  &trans  &trans    &kp F11  &kp F12  &kp F13  &kp F14  &kp F15
-                  &trans  &trans  &trans    &trans   &trans   &trans
             >;
         };
     };
