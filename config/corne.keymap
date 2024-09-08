@@ -8,12 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-};
-
-/ {
     combos {
         compatible = "zmk,combos";
 
