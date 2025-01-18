@@ -7,10 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-&mt {
-    tapping-term-ms = <150>;
-    flavor = "tap-preferred";
-};
+&mt { tapping-term-ms = <150>; };
 
 / {
     combos {
@@ -54,18 +51,6 @@
     };
 
     chosen { zmk,matrix_transform = &five_column_transform; };
-
-    behaviors {
-        mod_tap: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <50>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
