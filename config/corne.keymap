@@ -50,6 +50,18 @@
 
     chosen { zmk,matrix_transform = &five_column_transform; };
 
+    behaviors {
+        mod_tap: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <50>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,10 +73,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-  &kp APOS  &kp COMMA  &kp DOT       &kp P  &kp Y        &kp F                 &kp G  &kp C          &kp R  &kp L
-  &kp A     &kp O      &kp E         &kp U  &kp I        &kp D                 &kp H  &kp T          &kp N  &kp S
-  &kp SEMI  &kp Q      &kp J         &kp K  &kp X        &kp B                 &kp M  &kp W          &kp V  &kp Z
-                       &kp LEFT_GUI  &mo 1  &kp SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &kp BACKSPACE
+  &kp APOS  &kp COMMA  &kp DOT       &kp P  &kp Y        &kp F                      &kp G  &kp C          &kp R  &kp L
+  &kp A     &kp O      &kp E         &kp U  &kp I        &kp D                      &kp H  &kp T          &kp N  &kp S
+  &kp SEMI  &kp Q      &kp J         &kp K  &kp X        &kp B                      &kp M  &kp W          &kp V  &kp Z
+                       &kp LEFT_GUI  &mo 1  &kp SPACE    &mod_tap LEFT_SHIFT ENTER  &mo 2  &kp BACKSPACE
             >;
         };
 
